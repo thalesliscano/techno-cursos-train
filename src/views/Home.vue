@@ -3,10 +3,11 @@
     <PageLoading v-if="loading" />
     <transition>
       <div v-if="data" class="conteudo">
-        <h2>Sobre a {{  data.titulo }}</h2>
-        <p>{{ data.descricao }}</p>
-        <router-link  class="btn-cursos" tag="button" to="/cursos">Cursos</router-link>
         <div>
+          <h2>Sobre a {{  data.titulo }}</h2>
+          <p>{{ data.descricao }}</p>
+          <router-link  class="btn-cursos" tag="button" to="/cursos">Cursos</router-link>
+          <div>
           <h2>Avaliações</h2>
           <ul>
             <li v-for="avaliacao in data.avaliacoes" :key="avaliacao.nome">
@@ -15,6 +16,8 @@
             </li>
           </ul>
         </div>
+        </div>
+        <img src="../assets//aprender.png" alt="Aprenda Web Design">
       </div>
     </transition>
 

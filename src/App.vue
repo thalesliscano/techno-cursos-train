@@ -50,4 +50,13 @@ export default {
   .v-enter-active{
     transition: all 0.3s;
   }
+  img{
+    max-width: 100%;
+    display: block;
+  }
+
+  .conteudo{
+    display: grid;
+    grid-template-columns: 1fr minmax(200px, 400px);
+  }
 </style>
